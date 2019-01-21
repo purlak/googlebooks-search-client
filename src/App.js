@@ -4,11 +4,14 @@ import './App.css';
 
 class App extends Component {
   // initialize state
-
   state = {
     searchTerm: ''
   }
 
+  // Event handler for search
+  handleSearchInput = event => {
+    this.setState({searchTerm: event.target.value })
+  }
   render() {
 
     return (
@@ -16,20 +19,9 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1>Welcome to the Google Books Search App!</h1>
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
         <div className="App-intro">
-          <input type="text" onChange={this.handleSearchInput} value={this.state.searchTerm}>
+          <input type="text" onChange={this.handleSearchInput} value={this.state.searchTerm}/>
         </div>
       </div>
     );
