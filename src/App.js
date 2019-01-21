@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const googleBooksApiUrl = 'https://www.googleapis.com/books/v1/volumes?q='
+const googleBooksApiUrl = 'https://www.googleapis.com/books'
 
 class App extends Component {
   // initialize state
@@ -16,8 +16,11 @@ class App extends Component {
   }
 
   // event handler to send API request for search results
-  searchBook = event => {
-
+  searchBook = () => {
+    const query = this.state.searchTerm
+    fetch (`${googleBooksApiUrl}/v1/volumes?q=${query}&key=AIzaSyC6w6GQQMSEp_zUJ9ycieu8vr0sSK1qX4Y`)
+    .then (res => res.json())
+    .then(data => console.log(data))
   }
 
   render() {
