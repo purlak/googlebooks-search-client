@@ -1,7 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Google Books Search App
 ## App Description
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- This App is built using a React Front End. The Objective of this App is to search Google Books API for books, and has the following features
+- The objective of this App is to search Google Books API for books, and has the following features
   - Search by typing in a query
   - Search results include the following information
     - Book's author
