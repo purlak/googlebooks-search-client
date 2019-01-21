@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const googleBooksApiUrl = 'https://www.googleapis.com/books/v1/volumes?q='
+
 class App extends Component {
   // initialize state
   state = {
