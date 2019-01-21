@@ -3,10 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  // initialize state
+
+  state = {
+    searchTerm: ''
+  }
+
   render() {
-    state = {
-      searchTerm: ''
-    }
+
     return (
       <div className="App">
         <header className="App-header">
@@ -25,7 +29,7 @@ class App extends Component {
           </a>
         </header>
         <div className="App-intro">
-          <input type="text onChange={this.handleSearchInput} value={this.state.searchTerm}"
+          <input type="text" onChange={this.handleSearchInput} value={this.state.searchTerm}>
         </div>
       </div>
     );
