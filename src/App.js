@@ -8,10 +8,16 @@ class App extends Component {
     searchTerm: ''
   }
 
-  // Event handler for search
+  // event handler to capture search input
   handleSearchInput = event => {
     this.setState({searchTerm: event.target.value })
   }
+
+  // event handler to send API request for search results
+  searchBook = event => {
+
+  }
+
   render() {
 
     return (
@@ -22,6 +28,7 @@ class App extends Component {
         </header>
         <div className="App-intro">
           <input type="text" onChange={this.handleSearchInput} value={this.state.searchTerm}/>
+          <button onClick={this.searchBook}>Search</button>
         </div>
       </div>
     );
