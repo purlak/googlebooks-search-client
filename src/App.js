@@ -18,7 +18,7 @@ class App extends Component {
   // event handler to send API request for search results
   searchBook = () => {
     const query = this.state.searchTerm
-    fetch (`${googleBooksApiUrl}/v1/volumes?q=${query}&key=AIzaSyC6w6GQQMSEp_zUJ9ycieu8vr0sSK1qX4Y`)
+    fetch (`${googleBooksApiUrl}/v1/volumes?q=${query}&key=`)
     .then (res => res.json())
     .then(data => console.log(data))
   }
