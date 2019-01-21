@@ -4,10 +4,14 @@ import './App.css';
 
 class App extends Component {
   render() {
+    state = {
+      searchTerm: ''
+    }
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <h1>Welcome to the Google Books Search App!</h1>
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
@@ -20,6 +24,9 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <div className="App-intro">
+          <input type="text onChange={this.handleSearchInput} value={this.state.searchTerm}"
+        </div>
       </div>
     );
   }
