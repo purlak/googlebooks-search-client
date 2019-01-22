@@ -34,7 +34,7 @@ class App extends Component {
           <h1>Welcome to the Google Books Search App!</h1>
         </header>
         <div className="App-intro">
-          <input type="text" onChange={this.handleSearchInput} value={this.state.searchTerm}/>
+          <input type="text" onChange={this.handleSearchInput} value={this.state.searchTerm} placeholder="enter text"/>
           <button onClick={this.searchBook}>Search</button>
           <Books books={this.state.books}/>
         </div>
