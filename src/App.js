@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const googleBooksApiUrl = 'https://www.googleapis.com/books'
+const api_url = 'https://www.googleapis.com/books/v1'
+const api_key = process.env.REACT_APP_API_KEY;
 
 class App extends Component {
   // initialize state
@@ -18,7 +19,7 @@ class App extends Component {
   // event handler to send API request for search results
   searchBook = () => {
     const query = this.state.searchTerm
-    fetch (`${googleBooksApiUrl}/v1/volumes?q=${query}&key=`)
+    fetch (`${api_url}/volumes?q=${query}&key=${api_key}`)
     .then (res => res.json())
     .then(data => console.log(data))
   }
