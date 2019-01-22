@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react'
 
-const img_url = 'https://books.google.com/books?'
 class Books extends Component {
   render () {
     if (this.props.books.length === 0) {
