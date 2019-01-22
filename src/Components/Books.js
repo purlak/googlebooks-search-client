@@ -14,6 +14,7 @@ class Books extends Component {
               <h2>{book.volumeInfo.title}</h2>
               <h3>{book.volumeInfo.authors}</h3>
               <h3>{book.volumeInfo.publisher}</h3>
+              <a href={`${book.volumeInfo.infoLink}`} target="_blank">More Info</a>
 
             </div>
 
