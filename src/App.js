@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Books from '/Components/Books.js'
+import Books from './Components/Books.js'
+
 const api_url = 'https://www.googleapis.com/books/v1'
 const api_key = process.env.REACT_APP_API_KEY;
 
@@ -26,7 +27,6 @@ class App extends Component {
   }
 
   render() {
-
     return (
       <div className="App">
         <header className="App-header">
