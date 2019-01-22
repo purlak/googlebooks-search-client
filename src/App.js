@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Books from './Components/Books.js'
+import background from './background-image.svg';
+
 
 const api_url = 'https://www.googleapis.com/books/v1'
 const api_key = process.env.REACT_APP_API_KEY;
@@ -28,7 +30,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" style={{
+        backgroundImage: `url(${background}`
+      }}>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1>Welcome to the Google Books Search App!</h1>
