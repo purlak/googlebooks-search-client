@@ -29,15 +29,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <header className="App-body">
           <h1>Welcome to the Google Books Search App!</h1>
-        </header>
-
-        <div className="App-body" >
-          <input type="text" onChange={this.handleSearchInput} value={this.state.searchTerm} placeholder="enter text"/>
+          <input className="SearchBar" type="text" onChange={this.handleSearchInput} value={this.state.searchTerm} placeholder="enter text"/>
           <button onClick={this.searchBook}>Search</button>
           <Books books={this.state.books}/>
-        </div>
+        </header>
       </div>
     );
   }
