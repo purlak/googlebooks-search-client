@@ -9,13 +9,11 @@ class Books extends Component {
       return (
         <Fragment>
           {this.props.books.map(book =>
-            <list>
-              <ul>
+            <div>
               <h2>{book.volumeInfo.title}</h2>
               <h3>{book.volumeInfo.authors}</h3>
               <h3>{book.volumeInfo.publisher}</h3>
-              </ul>
-            </list>
+            </div>
 
           )}
         </Fragment>
