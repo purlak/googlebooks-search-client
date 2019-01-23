@@ -13,15 +13,22 @@
 
 .App-body {
   height: 100vh;
-  font-family: "Times New Roman", Times, serif;
   display:  flex;
   flex-direction: column;
-  /*  text-align: center; */
-  font-size: calc(6px + 2vmin);
-  color: white;
+  font-size: calc(5px + 2vmin);
+  color: black;
   left: 0;
   z-index: 4;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, .3);
+}
+
+.welcome {
+  margin-top: 50px;
+  color: black;
+  opacity: 0.8;
+  font-family: "arial";
+
+
 }
 
 .searchBar {
