@@ -1,12 +1,12 @@
 .App {
+  font-family: "Times New Roman", Times, serif;
   text-align: center;
   width: 100vw;
   height: 100vh;
-
   background-image: url(./books-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  position: static;
+  position: fixed;
   z-index: 3;
 
 }
@@ -16,8 +16,7 @@
   font-family: "Times New Roman", Times, serif;
   display:  flex;
   flex-direction: column;
-  text-align: left;
-  justify-content: left;
+  /*  text-align: center; */
   font-size: calc(6px + 2vmin);
   color: white;
   left: 0;
@@ -26,10 +25,21 @@
 }
 
 .searchBar {
-  margin: 10vh;
+  margin-top:  70px;
   background-color: white;
   border: 2px solid grey;
+  font-family: "Times New Roman", Times, serif;
+
   width: 50%;
   height: 3.5vh;
+  font-size: 20px;
+}
+
+.buttonSize {
+  margin-left: 20px;
+  font-family: "Times New Roman", Times, serif;
+  width: 5%;
+  background-color: lightgrey;
+  color: black;
   font-size: 20px;
 }
