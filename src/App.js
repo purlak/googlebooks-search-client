@@ -3,8 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 import Books from './Components/Books.js'
 
-
-
 const api_url = 'https://www.googleapis.com/books/v1'
 const api_key = process.env.REACT_APP_API_KEY;
 
