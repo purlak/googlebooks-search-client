@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import '../css/DisplayBooks.css';
-import No_image_available from '../css/images/No_image_available.svg'
+import No_image_available from '../css/images/No_image_available.png'
 
 class Books extends Component {
   render () {
+    // debugger
     if (this.props.books.length === 0) {
         return <h2>No books found! Try again!</h2>
     } else {
@@ -11,7 +12,7 @@ class Books extends Component {
         <div>
           {this.props.books.map(book =>
             <div className="displayBook">
-              {book.volumeInfo.imageLinks.smallThumbnail? (
+              {book.volumeInfo.imageLinks? (
                 <img src={`${book.volumeInfo.imageLinks.smallThumbnail}`} className="imageSize"/>
               ) : (
                 <img src={`${No_image_available}`} className="imageSize"/>
@@ -26,13 +27,13 @@ class Books extends Component {
               {book.volumeInfo.authors? (
                 <p className="displayInfo">{book.volumeInfo.authors}</p>
               ) : (
-                <p>Author Info N/A</p>
+                <p>Author - N/A</p>
               )}
 
               {book.volumeInfo.publisher? (
                 <p className="displayInfo">{book.volumeInfo.publisher}</p>
               ) : (
-                <p>Publisher Info N/A</p>
+                <p>Publisher - N/A</p>
               )}
 
               <a href={`${book.volumeInfo.infoLink}`} target="_blank" className="displayInfo">More >></a>
