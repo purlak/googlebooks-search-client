@@ -7,10 +7,13 @@ const api_url = 'https://www.googleapis.com/books/v1'
 const api_key = process.env.REACT_APP_API_KEY;
 
 class App extends Component {
-  // initialize state
-  state = {
-    searchTerm: '',
-    books: []
+  constructor () {
+    super ();
+    // initialize state
+    this.state = {
+      searchTerm: '',
+      books: []
+    };
   }
 
   // event handler to capture search input
