@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../Books.css';
-import No_image_available from '../No_image_available.svg'
+import No_image_available from '../images/No_image_available.svg'
 
 class Books extends Component {
   render () {
@@ -36,7 +36,7 @@ class Books extends Component {
               )}
 
               <a href={`${book.volumeInfo.infoLink}`} target="_blank" className="displayInfo">More >></a>
-            
+
             </div>
           )}
         </div>
