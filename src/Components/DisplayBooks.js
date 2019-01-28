@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../css/Books.css';
+import '../css/DisplayBooks.css';
 import No_image_available from '../css/images/No_image_available.svg'
 
 class Books extends Component {
