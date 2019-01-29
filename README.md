@@ -46,5 +46,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `npm run eject`
 
 ## Image Credits
-Background Photo by Patrick Tomasso on Unsplash.com
+Background Photo by Patrick Tomasso on Unsplash.com;
+
 No_image_available from https://en.wikipedia.org/wiki/File:No_image_available.svg
