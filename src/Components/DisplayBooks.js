@@ -6,7 +6,7 @@ class Books extends Component {
 
   render () {
       if (typeof(this.props.books) === 'undefined'){
-        return (<h2>No books found. Try again.</h2>)
+        return (<h3>No books found. Try again.</h3>)
       }
       else  if (typeof(this.props.books) !== 'undefined' || this.props.books != null){
         return (
