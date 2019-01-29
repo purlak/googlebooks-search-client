@@ -30,7 +30,7 @@ class Search extends Component {
       return (
         <div className="App">
           <header className="App-body">
-            <h1 className="welcome">Welcome to the Google Books Search App!</h1>
+            <h1 className="welcome">Welcome to the Books Search App!</h1>
             <div>
               <input className="searchBar" type="text" onChange={this.handleSearchInput} value={this.state.searchTerm} placeholder="search books"/>
               <button className="buttonSize" onClick={this.searchBook}>Search</button>
