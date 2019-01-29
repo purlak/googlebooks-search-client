@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import Books from './DisplayBooks.js'
+import React, { Component } from 'react';
+import Books from './DisplayBooks.js';
 import PropTypes from 'prop-types';
 
 const api_url = 'https://www.googleapis.com/books/v1'
@@ -16,11 +16,11 @@ class Search extends Component {
 
   handleSearchInput = event => {
     event.preventDefault();
-    this.setState({searchTerm: event.target.value })
+    this.setState({searchTerm: event.target.value });
   }
 
   searchBook = () => {
-    const query = this.state.searchTerm
+    const query = this.state.searchTerm;
     fetch (`${api_url}/volumes?q=${query}&key=${api_key}`)
     .then (res => res.json())
     .then(data => this.setState({books: data.items}))
@@ -39,7 +39,7 @@ class Search extends Component {
                   if (event.key === 'Enter') {
                     this.searchBook()
                   }
-                }} 
+                }}
                 value={this.state.searchTerm}
                 placeholder="search books"
               />

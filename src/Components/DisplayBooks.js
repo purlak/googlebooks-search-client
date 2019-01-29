@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import '../css/DisplayBooks.css';
-import No_image_available from '../css/images/No_image_available.png'
+import No_image_available from '../css/images/No_image_available.png';
 
 class Books extends Component {
 
@@ -45,5 +45,4 @@ class Books extends Component {
         )}
       }
 }
-
 export default Books;
