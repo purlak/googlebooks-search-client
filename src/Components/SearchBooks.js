@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Books from './DisplayBooks.js'
 import PropTypes from 'prop-types';
 
-
 const api_url = 'https://www.googleapis.com/books/v1'
 const api_key = process.env.REACT_APP_API_KEY;
 
