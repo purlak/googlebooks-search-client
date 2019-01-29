@@ -43,7 +43,7 @@ class Books extends Component {
             )}
           </div>
         )}
-  }
+      }
 }
 
 export default Books;
