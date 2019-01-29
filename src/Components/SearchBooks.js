@@ -10,8 +10,13 @@ class Search extends Component {
     // initialize state
     this.state = {
       searchTerm: '',
+      books: []
     };
   }
+
+  // componentDidMount () {
+  //   Books();
+  // }
 
   // event handler to capture search input
   handleSearchInput = event => {
@@ -20,7 +25,10 @@ class Search extends Component {
   }
 
   // event handler to fetch search results
-  searchBook = (event) => {
+  searchBook = () => {
+    this.setState ({
+        books: []
+    })
     const query = this.state.searchTerm
     fetch (`${api_url}/volumes?q=${query}&key=${api_key}`)
     .then (res => res.json())
@@ -28,8 +36,6 @@ class Search extends Component {
   }
 
   render() {
-
-      if (this.state.books) {
       return (
         <div className="App">
           <header className="App-body">
@@ -39,26 +45,25 @@ class Search extends Component {
               <button className="buttonSize" onClick={this.searchBook}>Search</button>
             </div>
             <Books books={this.state.books}/>
-
           </header>
         </div>
       );
     }
-    else {
-      return (
-        <div className="App">
-          <header className="App-body">
-            <h1 className="welcome">Welcome to the Google Books Search App!</h1>
-            <div>
-              <input className="searchBar" type="text" onChange={this.handleSearchInput} value={this.state.searchTerm} placeholder="search books"/>
-              <button className="buttonSize" onClick={this.searchBook}>Search</button>
-            </div>
-          </header>
-        </div>
-      )
-    }
+    // else {
+    //   return (
+    //     <div className="App">
+    //       <header className="App-body">
+    //         <h1 className="welcome">Welcome to the Google Books Search App!</h1>
+    //         <div>
+    //           <input className="searchBar" type="text" onChange={this.handleSearchInput} value={this.state.searchTerm} placeholder="search books"/>
+    //           <button className="buttonSize" onClick={this.searchBook}>Search</button>
+    //         </div>
+    //       </header>
+    //     </div>
+    //   )
+    // }
 
-  }
+  // }
 
 }
 
