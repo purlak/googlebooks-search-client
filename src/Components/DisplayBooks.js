@@ -5,9 +5,6 @@ import No_image_available from '../css/images/No_image_available.png'
 class Books extends Component {
 
   render () {
-      if (this.props.books.empty) {
-        return <p>No books found. Try again. </p>
-      } else {
       return (
         <div>
           {this.props.books.map(book =>
@@ -42,7 +39,6 @@ class Books extends Component {
           )}
         </div>
       )}
-    }
 }
 
 export default Books;

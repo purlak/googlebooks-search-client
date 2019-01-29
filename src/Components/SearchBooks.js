@@ -10,14 +10,8 @@ class Search extends Component {
     // initialize state
     this.state = {
       searchTerm: '',
-      books: []
     };
   }
-
-  // componentDidMount () {
-  //   Books();
-  // }
-
   // event handler to capture search input
   handleSearchInput = event => {
     event.preventDefault();
@@ -36,6 +30,7 @@ class Search extends Component {
   }
 
   render() {
+    if (this.state.books && this.state.books.length !== 0) {
       return (
         <div className="App">
           <header className="App-body">
@@ -49,22 +44,24 @@ class Search extends Component {
         </div>
       );
     }
-    // else {
-    //   return (
-    //     <div className="App">
-    //       <header className="App-body">
-    //         <h1 className="welcome">Welcome to the Google Books Search App!</h1>
-    //         <div>
-    //           <input className="searchBar" type="text" onChange={this.handleSearchInput} value={this.state.searchTerm} placeholder="search books"/>
-    //           <button className="buttonSize" onClick={this.searchBook}>Search</button>
-    //         </div>
-    //       </header>
-    //     </div>
-    //   )
-    // }
+    else if (this.state.books && this.state.books.length === 0) {
+      return (<h2>No books found. Try again.</h2>)
+    }
 
-  // }
-
+    else {
+      return (
+        <div className="App">
+          <header className="App-body">
+            <h1 className="welcome">Welcome to the Google Books Search App!</h1>
+            <div>
+              <input className="searchBar" type="text" onChange={this.handleSearchInput} value={this.state.searchTerm} placeholder="search books"/>
+              <button className="buttonSize" onClick={this.searchBook}>Search</button>
+            </div>
+          </header>
+        </div>
+      )
+    }
+  }
 }
 
 export default Search;
