@@ -7,17 +7,9 @@ describe ("Search component", () => {
         const wrapper = shallow(<Search />);
         expect(wrapper.exists()).toBe(true);
     })
+
+    test ("search text is echoed", () => {
+      const wrapper = shallow (<Search performSearch={() => {}} />);
+      console.log(wrapper)
+    })
 })
-
-
-// describe ('Search', () => {
-//   let wrapper;
-//
-//   beforeEach(() => {
-//       wrapper = shallow(<Search />)
-//   })
-//
-//   it ('renders the search bar', () => {
-//   })
-//
-// })
