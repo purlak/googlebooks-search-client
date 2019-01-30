@@ -10,7 +10,6 @@ describe ('Search', () => {
   })
 
   it ('renders the search bar', () => {
-
   })
 
 })
