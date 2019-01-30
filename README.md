@@ -10,16 +10,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     - Picture of the Book    
     - External link pointing to additional info
 
-## App Plan and Steps
-- Setup React Front End using create-react-app
-- Connect Google Books API - fetch request to obtain data
-- Add conditionals to check for valid data, including no search results.
-- Deploy to Heroku
-
 ## Available Scripts
 
 In the project directory, you can run:
-### `npm install` 
+### `npm install`
 ### `npm start`
 
 Runs the app in the development mode.<br>
