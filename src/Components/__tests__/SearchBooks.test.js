@@ -3,6 +3,14 @@ import {  shallow } from 'enzyme';
 import Search from '../SearchBooks'
 
 describe ('Search', () => {
-  it ('renders the search bar')
+  let wrapper;
+
+  beforeEach(() => {
+      wrapper = shallow(<Search />)
+  })
+
+  it ('renders the search bar', () => {
+    console.log(wrapper)
+  })
 
 })
