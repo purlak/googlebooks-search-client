@@ -15,7 +15,7 @@ class Search extends Component {
   }
 
   handleSearchInput = event => {
-    event.preventDefault();
+    // event.preventDefault();
     this.setState({searchTerm: event.target.value });
   }
 
