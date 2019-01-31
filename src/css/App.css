@@ -1,7 +1,7 @@
 .App {
   font-family: "arial";
   text-align: center;
-  height: 1080px;
+  height: 1080px  ;
   background-image: url(./images/books-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;

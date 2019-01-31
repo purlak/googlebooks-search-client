@@ -28,7 +28,7 @@ class Search extends Component {
   render() {
       return (
         <div className="App">
-          <header className="App-body">
+          <div className="App-body">
             <h1 className="welcome">Welcome to the Books Search App!</h1>
             <div>
               <input className="searchBar"
@@ -45,7 +45,7 @@ class Search extends Component {
               <button className="buttonSize" onClick={this.searchBook}>Search</button>
             </div>
             <Books books={this.state.books}/>
-          </header>
+          </div>
         </div>
       )
     }
