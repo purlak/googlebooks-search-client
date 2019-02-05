@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Display from './Display.js'
+import '../css/DisplayBooks.css';
 
 class Books extends Component {
 
@@ -11,11 +13,11 @@ class Books extends Component {
           <div>
             {this.props.books.map(book =>
               <div className="displayBook">
-                  <Display />
-              <div>
+                <Display book={book}/>
+              </div>
             )}
           </div>
         )}
-      }
+    }
 }
 export default Books;
