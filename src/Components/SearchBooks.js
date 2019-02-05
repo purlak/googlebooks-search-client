@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Books from './DisplayBooks.js';
+import BookService from './services/BookService.js';
 
 const api_url = 'https://www.googleapis.com/books/v1'
 const api_key = process.env.REACT_APP_API_KEY;
@@ -11,6 +12,10 @@ class Search extends Component {
       searchTerm: '',
       books: []
     };
+  }
+
+  componentDidMount() {
+    BookService.fetchBooks()
   }
 
   handleSearchInput = event => {
