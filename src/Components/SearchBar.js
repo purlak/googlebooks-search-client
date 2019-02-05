@@ -7,32 +7,36 @@ class SearchBar extends Component {
     super (props);
     this.state = {
       searchTerm: '',
-      books: this.props.books
+      newbooks: this.props.books
     };
   }
   handleSearchInput = event => {
     this.setState({searchTerm: event.target.value });
   }
 
+  searchBook = () =>  {
+    BookService.fetchBooks(this.state.searchTerm)
+      .then(data => this.setState({  newbooks: data.items }))
+      console.log(this.state.newbooks)
+  }
+
   render () {
-    console.log(this.props.books)
     return (
       <div>
-      <input className="searchBar"
-        type="text"
-        onChange={this.handleSearchInput}
-        onKeyPress={event => {
-          if (event.key === 'Enter') {
-            this.fetchBooks()
-          }
-        }}
-        value={this.state.searchTerm}
-        placeholder="search books"
-      />
-      <button className="buttonSize" onClick={this.searchBook}>Search</button>
+        <input className="searchBar"
+          type="text"
+          onChange={this.handleSearchInput}
+          onKeyPress={event => {
+            if (event.key === 'Enter') {
+              this.searchBook()
+            }
+          }}
+          value={this.state.searchTerm}
+          placeholder="search books"
+        />
+        <button className="buttonSize" onClick={this.searchBook}>Search</button>
       </div>
-    )
-  }
+  )}
 }
 
 export default SearchBar;
