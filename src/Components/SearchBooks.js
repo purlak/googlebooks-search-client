@@ -26,7 +26,7 @@ class Search extends Component {
               onBooksChange={this.onBooksChange}
             />
           </div>
-          <Books books={this.state.newbooks}/>
+          <Books books={this.state.books}/>
         </div>
       )
     }
