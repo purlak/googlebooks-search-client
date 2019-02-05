@@ -9,12 +9,11 @@ class Search extends Component {
   constructor () {
     super ();
     this.state = {
-      // searchTerm: '',
       books: []
     };
     this.onBooksChange = this.onBooksChange.bind(this);
   }
-  
+
   onBooksChange(newbooks)  {
     this.setState({books : newbooks}, ()=>{
       console.log('Books data changed by SearchBar');
@@ -22,8 +21,6 @@ class Search extends Component {
   }
 
   render() {
-    console.log(this.state.books)
-
       return (
         <div>
           <div>
