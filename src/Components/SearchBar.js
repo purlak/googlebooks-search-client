@@ -7,7 +7,7 @@ class SearchBar extends Component {
     super (props);
     this.state = {
       searchTerm: '',
-      newbooks: this.props.books
+      books: this.props.books
     };
   }
   handleSearchInput = event => {
@@ -16,8 +16,7 @@ class SearchBar extends Component {
 
   searchBook = () =>  {
     BookService.fetchBooks(this.state.searchTerm)
-      .then(data => this.setState({  newbooks: data.items }))
-      console.log(this.state.newbooks)
+      .then(data => this.props.onBooksChange(data.items))
   }
 
   render () {
