@@ -4,3 +4,9 @@
 - Add conditionals to check for valid data, including no search results
 - Add tests using Enzyme and Jess
 - Deploy to Heroku
+
+Refactor
+ - SearchBooks Component - breakout into smaller components
+ - DisplayBooks Component - remove duplication
+ - Error handling - if API n/a or user's computer is offline
+ - Add tests
