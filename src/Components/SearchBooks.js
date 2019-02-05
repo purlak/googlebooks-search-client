@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import SearchBar from './SearchBar.js';
 import Books from './DisplayBooks.js';
-import BookService from '../Services/BookService.js';
 
 // const api_url = 'https://www.googleapis.com/books/v1'
 // const api_key = process.env.REACT_APP_API_KEY;
@@ -9,19 +9,16 @@ class Search extends Component {
   constructor () {
     super ();
     this.state = {
-      searchTerm: '',
+      // searchTerm: '',
       books: []
     };
+    this.onBooksChange = this.onBooksChange.bind(this);
   }
+  // componentDidMount() {
+  //   BookService.fetchBooks(this.state.searchTerm)
+  //   .then(data => this.setState({  books: data.items }))
+  // }
 
-  componentDidMount() {
-    BookService.fetchBooks(this.state.searchTerm)
-    .then(data => this.setState({  books: data.items }))
-  }
-
-  handleSearchInput = event => {
-    this.setState({searchTerm: event.target.value });
-  }
 
   // searchBook = () => {
     // const query = this.state.searchTerm;
@@ -30,14 +27,22 @@ class Search extends Component {
     // .then (res => res.json())
     // .then(data => this.setState({books: data.items}))
   // }
+  onBooksChange(newbooks)  {
+    this.setState({books : newbooks}, ()=>{
+      console.log('Books data changed by SearchBar');
+    })
+  }
 
   render() {
       return (
         <div>
           <div>
-            <SearchBar />
+            <SearchBar
+              books={this.state.books}
+              onBooksChange={this.onBooksChange}
+            />
           </div>
-          <Books books={this.state.books}/>
+          <Books books={this.state.newbooks}/>
         </div>
       )
     }
