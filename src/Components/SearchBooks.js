@@ -27,24 +27,23 @@ class Search extends Component {
 
   render() {
       return (
-            <div>
-            <div>
-              <input className="searchBar"
-                type="text"
-                onChange={this.handleSearchInput}
-                onKeyPress={event => {
-                  if (event.key === 'Enter') {
-                    this.searchBook()
-                  }
-                }}
-                value={this.state.searchTerm}
-                placeholder="search books"
-              />
-              <button className="buttonSize" onClick={this.searchBook}>Search</button>
-            </div>
-            <Books books={this.state.books}/>
-            </div>
-
+        <div>
+          <div>
+            <input className="searchBar"
+              type="text"
+              onChange={this.handleSearchInput}
+              onKeyPress={event => {
+                if (event.key === 'Enter') {
+                  this.searchBook()
+                }
+              }}
+              value={this.state.searchTerm}
+              placeholder="search books"
+            />
+            <button className="buttonSize" onClick={this.searchBook}>Search</button>
+          </div>
+          <Books books={this.state.books}/>
+        </div>
       )
     }
 }
