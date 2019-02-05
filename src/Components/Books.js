@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import '../css/DisplayBooks.css';
-import No_image_available from '../css/images/No_image_available.png';
 
 class Books extends Component {
 
@@ -14,7 +12,7 @@ class Books extends Component {
             {this.props.books.map(book =>
               <div className="displayBook">
                   <Display />
-              <div>    
+              <div>
             )}
           </div>
         )}
