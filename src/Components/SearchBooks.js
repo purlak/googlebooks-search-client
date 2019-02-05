@@ -1,3 +1,5 @@
+// the function of this component is to maintain state of the books array.
+
 import React, { Component } from 'react';
 import SearchBar from './SearchBar.js';
 import Books from './DisplayBooks.js';
