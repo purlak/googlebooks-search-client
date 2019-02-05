@@ -14,19 +14,7 @@ class Search extends Component {
     };
     this.onBooksChange = this.onBooksChange.bind(this);
   }
-  // componentDidMount() {
-  //   BookService.fetchBooks(this.state.searchTerm)
-  //   .then(data => this.setState({  books: data.items }))
-  // }
-
-
-  // searchBook = () => {
-    // const query = this.state.searchTerm;
-
-    // fetch (`${api_url}/volumes?q=${query}&key=${api_key}`)
-    // .then (res => res.json())
-    // .then(data => this.setState({books: data.items}))
-  // }
+  
   onBooksChange(newbooks)  {
     this.setState({books : newbooks}, ()=>{
       console.log('Books data changed by SearchBar');
@@ -34,6 +22,8 @@ class Search extends Component {
   }
 
   render() {
+    console.log(this.state.books)
+
       return (
         <div>
           <div>
