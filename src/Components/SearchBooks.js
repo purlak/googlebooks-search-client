@@ -12,9 +12,7 @@ class Search extends Component {
   }
 
   onBooksChange(newbooks)  {
-    this.setState({books : newbooks}, ()=>{
-      console.log('Books data changed by SearchBar');
-    })
+    this.setState({books: newbooks})
   }
 
   render() {
