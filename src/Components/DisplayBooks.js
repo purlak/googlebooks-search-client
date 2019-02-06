@@ -4,16 +4,10 @@ import '../css/DisplayBooks.css';
 
 import No_image_available from '../css/images/No_image_available.png';
 
-class Display extends Component {
+class DisplayBooks extends Component {
   constructor (props) {
     super (props);
     this.state = {
-    //   data: {
-    //   'title': '',
-    //   'authors': '',
-    //   'publisher': '',
-    //   'imageLinks': ''
-    // } ,
       bookData: this.props.book.volumeInfo
     };
   }
@@ -27,7 +21,7 @@ class Display extends Component {
     )}
 }
 
-export default Display;
+export default DisplayBooks;
 
 // {bookData.title? (
 //   <h3 className="displayInfo">Title: {bookData.title}</h3>
