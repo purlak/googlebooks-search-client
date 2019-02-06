@@ -7,7 +7,7 @@ class SearchBar extends Component {
     super (props);
     this.state = {
       searchTerm: '',
-      books: this.props.books,
+      books: this.props.books
     };
   }
   handleSearchInput = event => {
