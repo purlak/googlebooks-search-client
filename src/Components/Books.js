@@ -12,19 +12,22 @@ class Books extends Component {
 
   getInfoOrDisplayDefault(data) {
     Object.keys(data.volumeInfo).map(function(key) {
-      console.log(key)
       switch (key)  {
+        case 'imageLinks':
+          console.log(data.volumeInfo[key]['smallThumbnail'])
+          break;
         case 'title':
           console.log(data.volumeInfo[key])
-          default:
-            console.log('foo');
+          break;
+        case 'authors':
+          console.log(data.volumeInfo[key][0])
+          break;
+        case 'publisher':
+          console.log(data.volumeInfo[key])
+          break;
+        }
       }
-
-      }
-
-    )
-    }
-
+    )}
 
   render () {
       if (typeof(this.props.books) === 'undefined'){
