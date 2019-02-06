@@ -27,6 +27,9 @@ Launches the test runner in the interactive watch mode.<br>
 
 The app has been deployed at https://books-search-app.herokuapp.com/
 
+## External Tools
+https://github.com/chrisbolin/react-detect-offline#readme (tracks online an offline state)
+
 ## Image Credits
 Background Photo by Patrick Tomasso on Unsplash.com;
 
