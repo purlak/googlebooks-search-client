@@ -1,4 +1,4 @@
-// the purpose of this component is to handle search input
+// the purpose of this component is to handle search input and fetch data
 
 import React, { Component } from 'react';
 import BookService from '../Services/BookService.js';
@@ -41,22 +41,3 @@ class SearchBar extends Component {
 }
 
 export default SearchBar;
-
-// render () {
-//   return (
-//     <div>
-//       <input className="searchBar"
-//         type="text"
-//         onChange={this.handleSearchInput}
-//         onKeyPress={event => {
-//           if (event.key === 'Enter') {
-//             this.searchBook()
-//           }
-//         }}
-//         value={this.state.searchTerm}
-//         placeholder="search books"
-//       />
-//       <button className="buttonSize" onClick={this.searchBook}>Search</button>
-//     </div>
-// )}
-// }
