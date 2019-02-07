@@ -5,6 +5,7 @@
   "dependencies": {
     "enzyme-adapter-react-16": "^1.8.0",
     "enzyme-to-json": "^3.3.5",
+    "is-url": "^1.2.4",
     "react": "^16.7.0",
     "react-detect-offline": "^2.1.2",
     "react-dom": "^16.7.0",
