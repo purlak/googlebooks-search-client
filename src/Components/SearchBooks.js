@@ -1,4 +1,4 @@
-// the function of this component is to maintain state of the books array
+// the purpose of this component is to track state of the books array, and pass it to display.
 
 import React, { Component } from 'react';
 import SearchBar from './SearchBar.js';
