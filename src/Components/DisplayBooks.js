@@ -1,49 +1,24 @@
 import React, { Component } from 'react';
-import DataService from '../Services/DataService';
 import '../css/DisplayBooks.css';
 
-import No_image_available from '../css/images/No_image_available.png';
 
 class DisplayBooks extends Component {
-  constructor (props) {
-    super (props);
-    this.state = {
-      bookData: this.props.book.volumeInfo
-    };
+  render ()   {
+    console.log(this.props.data)
+    switch (typeof(this.props.data)) {
+      case 'string':
+        return (<h2 className="displayInfo">{this.props.data}</h2>)
+        break;
+      case 'object':
+        return (<h2 className="displayInfo">{this.props.data[0]}</h2>)
+        break;
+    }
   }
-
-  render () {
-    const display = DataService.checkData(this.state.bookData)
-    return (
-      <div className="displayInfo">
-        {display}
-      </div>
-    )}
 }
-
 export default DisplayBooks;
-
-// {bookData.title? (
-//   <h3 className="displayInfo">Title: {bookData.title}</h3>
-// ) : (
-//   <h3 className="displayInfo">Title: Info N/A</h3>
-// )}
-// {bookData.imageLinks? (
-//   <img src={`${bookData.imageLinks.smallThumbnail}`} className="imageSize"/>
-// ) : (
-//   <img src={`${No_image_available}`} className="imageSize"/>
-// )}
-// <p></p>
-// {bookData.authors? (
-//   <p className="displayInfo">Author: {bookData.authors[0]}</p>
-// ) : (
-//   <p>Author: N/A</p>
-// )}
+// <img src={`${this.props.data.imageLinks.smallThumbnail}`} className="imageSize">
+// <p className="displayInfo">Author: {this.props.data.authors[0]}</p>
+// <h3 className="displayInfo">Title: {this.props.data.title}</h3>
 //
-// {bookData.publisher? (
-//   <p className="displayInfo">Publisher: {bookData.publisher}</p>
-// ) : (
-//   <p>Publisher: N/A</p>
-// )}
-//
-// <a href={`${bookData.infoLink}`} target="_blank" className="displayInfo">More >></a>
+// <p className="displayInfo">Publisher: {this.props.data.publisher}</p>
+// <a href={`${this.props.data.infoLink}`} target="_blank" className="displayInfo">More >></a>
