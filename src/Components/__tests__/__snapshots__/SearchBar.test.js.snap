@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar component pass value to the onChange handler 1`] = `
+<div>
+  <input
+    className="searchBar"
+    onChange={[Function]}
+    onKeyPress={[Function]}
+    placeholder="search books"
+    type="text"
+    value=""
+  />
+  <button
+    className="buttonSize"
+    onClick={[Function]}
+  >
+    Search
+  </button>
+</div>
+`;
