@@ -7,4 +7,9 @@ describe ("Search component", () => {
         const wrapper = shallow(<Search />);
         expect(wrapper.exists()).toBe(true);
     });
+
+    it('renders SearchBar component', () => {
+      const wrapper = shallow(<Search />);
+      expect(wrapper.find(SearchBar)).to.have.lengthOf(1);
+    });
 });
