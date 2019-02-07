@@ -16,9 +16,3 @@ class DisplayBooks extends Component {
   }
 }
 export default DisplayBooks;
-// <img src={`${this.props.data.imageLinks.smallThumbnail}`} className="imageSize">
-// <p className="displayInfo">Author: {this.props.data.authors[0]}</p>
-// <h3 className="displayInfo">Title: {this.props.data.title}</h3>
-//
-// <p className="displayInfo">Publisher: {this.props.data.publisher}</p>
-// <a href={`${this.props.data.infoLink}`} target="_blank" className="displayInfo">More >></a>
