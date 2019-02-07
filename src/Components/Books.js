@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import DisplayBooks from './DisplayBooks.js'
+import Display from './Display.js'
 import '../css/DisplayBooks.css';
-import No_image_available from '../css/images/No_image_available.png';
 
 class Books extends Component {
 
@@ -18,7 +17,7 @@ class Books extends Component {
           <div>
           {this.props.books.map(book =>
             <div className="displayBook">
-                <DisplayBooks book= {book.volumeInfo}/>
+                <Display book= {book}/>
             </div>
         )}
         </div>
