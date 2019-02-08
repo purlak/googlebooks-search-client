@@ -1,5 +1,3 @@
-// the purpose of this component is to handle search input and fetch data
-
 import React, { Component } from 'react';
 import BookService from '../Services/BookService.js';
 import '../css/App.css';

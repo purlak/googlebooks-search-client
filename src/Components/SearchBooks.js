@@ -1,5 +1,3 @@
-// the purpose of this component is to track state of the books array, and pass it to display.
-
 import React, { Component } from 'react';
 import SearchBar from './SearchBar.js';
 import Books from './Books.js';
