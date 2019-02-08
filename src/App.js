@@ -13,7 +13,7 @@ class App extends Component {
             <Search />
           </Online>
           <Offline>
-            <h3> You're offline right now. Check your connection. </h3>
+            <h3> You are offline right now. Check your connection. </h3>
           </Offline>
         </div>
       </div>
