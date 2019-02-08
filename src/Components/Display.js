@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import DataService from '../Services/DataService.js'
-
 import '../css/DisplayBooks.css';
 
 class Display extends Component {
@@ -16,7 +15,7 @@ class Display extends Component {
               {DataService.searchBook(data[key])}
             </div>
           )}
-        else if (keys.includes(key)) {
+        else if (keys.includes(key) && !(data[key])){
           return (
             <div>
               <p className="displayInfo">{ key }: N/A</p>
