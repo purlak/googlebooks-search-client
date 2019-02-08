@@ -6,7 +6,7 @@ class Display extends Component {
 
   getOrDefault = (key, volumeInfo) => {
     if (volumeInfo[key]) {
-      return DataService.searchBook(volumeInfo[key])
+      return DataService.searchBook(volumeInfo[key], key)
     }
     return (
       <h2 className="displayInfo">{ key }: N/A</h2>
