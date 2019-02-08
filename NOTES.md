@@ -15,7 +15,7 @@
 
  - DisplayBooks Component - In order to implement single responsibility principle and also remove duplication in the existing code related to conditional rendering, I have attempted the following:
    - Books Component does a primary check for data from the API and if data is found, renders the Display Component.
-   - Display Component calls a function to check for validity of individual attributes (eg. title, author etc.) and calls the DataService Component to display valid data.  
+   - Display Component calls a function to check for validity of individual attributes (eg. title, author etc.) and uses  DataService to display valid data.  
 
  - Error handling - if API n/a or user's computer is offline:
     - I used a tool called react-detect-offline tool in App.js to check if the user's computer is offline. If offline, an error message is displayed.
