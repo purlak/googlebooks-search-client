@@ -9,9 +9,10 @@ const BookService = {
         return res.json()
       }
       else {
-        throw Error(`Request rejected with status ${res.status}`);
+        throw Error(`Request rejected with status ${res.status}.`);
       }
     })
+
   }
 }
 
