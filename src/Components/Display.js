@@ -6,10 +6,10 @@ class Display extends Component {
 
   getOrDefault = (key, volumeInfo) => {
     if (volumeInfo[key]) {
-        return DataService.searchBook(volumeInfo[key])
+      return DataService.searchBook(volumeInfo[key])
     }
     return (
-          <p className="displayInfo">{ key }: N/A</p>
+      <h2 className="displayInfo">{ key }: N/A</h2>
     )
   }
 
@@ -27,20 +27,3 @@ class Display extends Component {
 }
 
 export default Display;
-
-// Alternate code
-// const data = this.props.book.volumeInfo
-// Object.keys(this.props.book.volumeInfo).map(function(key) {
-//   if (keys.includes(key) && (data[key])) {
-//     return (
-//       <div>
-//         {DataService.searchBook(data[key])}
-//       </div>
-//     )}
-//   else if (keys.includes(key) && !(data[key])){
-//     return (
-//       <div>
-//         <p className="displayInfo">{ key }: N/A</p>
-//       </div>
-//   )}
-// })
