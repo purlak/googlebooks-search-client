@@ -1,4 +1,4 @@
-const api_url = 'https://www.googleapis.com/books/v1'
+const api_url = 'https://www.googleapis.com/books/v1';
 const api_key = process.env.REACT_APP_API_KEY;
 
 const BookService = {
@@ -12,8 +12,6 @@ const BookService = {
         throw Error(`Request rejected with status ${res.status}.`);
       }
     })
-
   }
 }
-
 export default BookService;
