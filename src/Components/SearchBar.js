@@ -16,7 +16,14 @@ class SearchBar extends Component {
 
   searchBook = () =>  {
     BookService.fetchBooks(this.state.searchTerm)
-      .then(data => this.props.onBooksChange(data.items))
+      .then(data => {
+        if (data) {
+          this.props.onBooksChange(data.items)
+        }
+        else {
+          return <h1>Something went wrong. </h1>
+        }
+      })
   }
 
   render () {
