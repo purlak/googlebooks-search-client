@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import DataService from '../Services/DataService.js'
+import DataService from '../Services/DataService.js';
 import '../css/DisplayBooks.css';
 
 class Display extends Component {
-
   getOrDefault = (key, volumeInfo) => {
     if (volumeInfo[key]) {
       return DataService.searchBook(volumeInfo[key], key)
@@ -25,5 +24,4 @@ class Display extends Component {
     )
   }
 }
-
 export default Display;
