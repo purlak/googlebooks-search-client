@@ -14,7 +14,7 @@ class Display extends Component {
   }
 
   render () {
-    const data = this.props.book.volumeInfo
+    const { volumeInfo } = this.props.book
     const keys = ['title', 'authors', 'publisher', 'imageLinks', 'infoLink']
     return (
       keys.map((key) => {
@@ -29,6 +29,7 @@ class Display extends Component {
 export default Display;
 
 // Alternate code
+// const data = this.props.book.volumeInfo
 // Object.keys(this.props.book.volumeInfo).map(function(key) {
 //   if (keys.includes(key) && (data[key])) {
 //     return (
