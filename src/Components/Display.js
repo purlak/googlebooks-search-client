@@ -8,7 +8,7 @@ class Display extends Component {
       return DataService.searchBook(volumeInfo[key], key)
     }
     return (
-      <h2 className="displayInfo">{ key }: N/A</h2>
+      <h2 className="displayInfo">{ key.charAt(0).toUpperCase() + key.slice(1)}: N/A</h2>
     )
   }
 
