@@ -24,6 +24,8 @@ const DataService = {
           else {
             return <img src={`${data.smallThumbnail}`} className="imageSize"/>
             break;
+        default:
+          return;
           }
       }
   }
