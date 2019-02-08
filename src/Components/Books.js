@@ -3,9 +3,6 @@ import Display from './Display.js';
 import '../css/DisplayBooks.css';
 
 class Books extends Component {
-  constructor() {
-    super();
-  }
 
   render () {
     if (typeof(this.props.books) === 'undefined'){
