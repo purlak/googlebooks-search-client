@@ -10,23 +10,22 @@ class Search extends Component {
     };
     this.onBooksChange = this.onBooksChange.bind(this);
   }
-
+  
   onBooksChange(newbooks)  {
     this.setState({books: newbooks})
   }
 
   render() {
-      return (
+    return (
+      <div>
         <div>
-          <div>
-            <SearchBar
-              books={this.state.books}
-              onBooksChange={this.onBooksChange}
-            />
-          </div>
-          <Books books={this.state.books}/>
+          <SearchBar
+            books={this.state.books}
+            onBooksChange={this.onBooksChange}
+          />
         </div>
-      )
-    }
+        <Books books={this.state.books}/>
+      </div>
+    )}
 }
 export default Search;
